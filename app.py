@@ -52,7 +52,7 @@ def health_check():
         'service': 'data-analyst-agent'
     })
 
-@app.route('/api/', methods=['POST'])
+@app.route('/api/analyze', methods=['POST'])
 def analyze_data():
     """Main API endpoint for data analysis"""
     try:
@@ -152,4 +152,5 @@ if __name__ == '__main__':
     
     app.run(host='0.0.0.0', port=port, debug=debug)
 
+uploaded_files = {}
 print("Uploaded files:", uploaded_files)
